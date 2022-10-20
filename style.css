@@ -1,0 +1,255 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Body */
+body {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 400;
+    background-image: url(https://www.jobenetuk.dev/grain.59859767.svg);
+    background-color: #F5CF8D;
+}
+
+
+/* Main */
+main {
+    color: #F5CF8D;
+    display: grid;
+    grid-template-columns: 40% auto;
+    background-color: #0a0a09;
+    background-image: url(https://www.jobenetuk.dev/grain.59859767.svg);
+    padding: 60px 35px;
+    margin: 50px 50px 30px 50px;
+    border-radius: 40px;
+}
+
+figure {
+    display: flex;
+}
+
+img {
+    margin: auto auto auto 20px;
+    width: 70%;
+}
+
+
+/* Header */
+header {
+    margin-bottom: 55px;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 4.5rem;
+    margin-bottom: 7px;
+    letter-spacing: 3px;
+}
+
+header > p {
+    font-weight: 400;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    word-spacing: 3px;
+
+}
+
+
+/* form */
+#form_container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 25px;
+    font-weight: 500;
+    font-size: 1rem;
+    padding-right: 45px;
+    margin-bottom: 6px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 4px;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+}
+
+input {
+    display: block;
+    width: 92%;
+    font-size: 1rem;
+    padding: 8px 10px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color:#ea709966;
+    background-color: rgba(119, 68, 85, 0.487);
+}
+
+input:focus {
+    outline: none !important;
+    border:1px solid #ff8c00;
+    background-color: #e0ddd7;
+}
+
+.error-message {
+    display: none;
+}
+
+input:not(:focus):not(:placeholder-shown):invalid {
+    background: url(https://adrianbravomr.github.io/signupform/images/wrong.svg);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 97% 50%;
+    background-color: pink;
+    border-color: red;
+}
+
+input:not(:focus):not(:placeholder-shown):invalid~.error-message {
+    display: block;
+    color: rgb(253, 65, 65);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+input:not(:focus):not(:placeholder-shown):valid {
+    background: url(https://adrianbravomr.github.io/signupform/images/check.svg);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 97% 50%;
+    background-color: rgb(228, 255, 228);
+    border-color: lightgreen;
+}
+
+
+/* Show password */
+.show_password {
+    margin-bottom: 45px;
+}
+
+.show_password > input[type="checkbox"] {
+    display: unset;
+    width: unset;
+    vertical-align: text-bottom;
+    background-color: #F5CF8D;
+}
+
+.show_password > input::after {
+    content: "";
+    border-top: 13px solid;
+    border-color: #F5CF8D;
+    border-radius: 2px;
+    display: block;
+}
+
+.show_password > input:checked::after {
+    position: absolute;
+}
+
+.show_password > label {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    word-spacing: 0px;
+    font-weight: 500;
+    color: #ea709966;
+}
+
+
+/* Summit button */
+button {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    padding: 13px 35px;
+    font-size: 1.4rem;
+    border: 0px;
+    border-radius: 7px;
+    width: 60%;
+    margin-bottom: 18px;
+    background-color: #ff8c00;
+    color: black;
+    border: 2px;
+    border-style: solid;
+    border-color: #454545;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #de6b00;
+}
+
+button + p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    word-spacing: 0px;
+    margin-left: 13px;
+    color: #ea709966;
+} 
+
+a {
+    color: #e22a6872
+}
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    font-weight: 600;
+    word-spacing: 3px;
+    color: rgba(0, 0, 0, 0.892)
+}
+
+.footer a {
+    color:#3c3c3caf;
+}
+
+svg {
+    position: relative;
+    top: 1.3px;
+    opacity: 0.9;
+}
